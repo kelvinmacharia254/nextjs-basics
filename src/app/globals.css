@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Montserrat:wght@400;700&display=swap');
 
-/*Define color schem variables*/
+/*Define color scheme variables*/
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -26,8 +26,8 @@ body {
   background: var(--background);
   font-family: 'Quicksand', sans-serif;
   /* Ensure smooth rendering of text*/
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;  /* Safari and Chrome (macOS) */
+  -moz-osx-font-smoothing: grayscale;   /* Firefox (macOS) */
 }
 
 /* normalizing css*/
@@ -43,7 +43,7 @@ a {
   text-decoration: none;
 }
 
-/* Adapt defaults styles if in dark mode. No need for custom overrides
+/* Adapt defaults styles if in dark mode, with this no need for custom overrides
 Defaults styles are in light mode. This setting only applies to the dark mode */
 @media (prefers-color-scheme: dark) {
   html {

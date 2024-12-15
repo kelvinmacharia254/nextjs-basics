@@ -9,3 +9,7 @@ Main concepts covered in this project are:
 5. Server actions and handling form data
 6. Dynamic pages and dynamic routes
 7. Revalidating/refreshing pages with latest data
+
+The project is a clone of EADEVS Foodies app practice project. 
+Original project Github Link: [https://github.com/mohamuhsin/eadevs-events-tanstack.git](https://github.com/mohamuhsin/eadevs-events-tanstack.git)
+
