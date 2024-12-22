@@ -5,7 +5,7 @@ Main concepts covered in this project are:
 1. Next app routing file system
 2. Font optimization with next/font
 3. Image optimization with next/image
-4. Connect a next app to a data base. Sqlite database used to store meal data
+4. Connect a next app to a database such as sqlite.
 5. Server actions and handling form data
 6. Dynamic pages and dynamic routes
 7. Revalidating/refreshing pages with latest data
