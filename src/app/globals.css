@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Montserrat:wght@400;700&display=swap');
-
 /*Define color scheme variables*/
 :root {
   --background: #ffffff;
@@ -24,7 +22,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Quicksand', sans-serif;
   /* Ensure smooth rendering of text*/
   -webkit-font-smoothing: antialiased;  /* Safari and Chrome (macOS) */
   -moz-osx-font-smoothing: grayscale;   /* Firefox (macOS) */
