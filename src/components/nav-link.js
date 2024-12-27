@@ -9,8 +9,8 @@ import clsx from "clsx";
 
 export default function NavLink({href, children}){
     const path = usePathname()
-    console.log(`path: ${path}`)
-    console.log(`href: ${href}`)
+    // console.log(`path: ${path}`)
+    // console.log(`href: ${href}`)
     return(
         <Link href={href}
               // className={path.startsWith(href) ? `${classes.link} ${classes.active}`: `${classes.link}`}

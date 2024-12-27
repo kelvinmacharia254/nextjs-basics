@@ -7,7 +7,7 @@
 /*  Dynamically switch the color scheme depending on system preference*/
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #132a3d;
     --foreground: #ededed;
   }
 }
