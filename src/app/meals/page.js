@@ -4,11 +4,24 @@ import {dummyMeals} from "@/lib/dummyMeals";
 import classes from "./page.module.css";
 import MealGrid from "@/components/meals/meal-grid";
 
+import {getMeals} from "@/lib/queries";
+
 export const metadata = {
     title: "Meals",
     description: "Explore meals from all over the world.",
 }
+
+async function Meals() {
+  const meals = await getMeals();
+  return (
+    <>
+      <MealsGrid meals={meals} />;
+    </>
+  );
+}
+
 export default function MealsPage(){
+    const meals =  getMeals();
     return (
         <>
             <header className={classes.header}>
@@ -24,7 +37,11 @@ export default function MealsPage(){
                 </p>
             </header>
             <main className={classes.main}>
-                <MealGrid meals={dummyMeals} />
+                <Suspense
+                fallback={<p className={classes.loading}>Fetching Meals...</p>}
+                >
+                    <Meals />
+                </Suspense>
             </main>
         </>
     )
