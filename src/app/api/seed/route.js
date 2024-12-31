@@ -38,16 +38,6 @@ async function seedMeals() {
   }
 }
 
-// export async function GET() {
-//   return new Response(
-//     JSON.stringify({
-//       message:
-//         "Uncomment this file and remove this line. You can delete this file when you are finished.",
-//     }),
-//     { headers: { "Content-Type": "application/json" } }
-//   );
-// }
-
 export async function GET() {
   try {
     await seedMeals();  // Make sure to await the asynchronous seeding process
