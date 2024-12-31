@@ -5,7 +5,8 @@ import Image from "next/image";
 import {notFound} from "next/navigation";
 import {metadata as meal} from "@/app/layout";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(context) {
+    const params = await context.params
     const meal = await getMeal(params.mealSlug);
 
     if (!meal) {
@@ -17,7 +18,8 @@ export async function generateMetadata({ params }) {
         description: meal.summary,
     };
 }
-export default async function MailDetailsPage({params}){
+export default async function MailDetailsPage(context){
+    const params = await context.params
     const meal = await getMeal(params.mealSlug);
 
     if (!meal) {
