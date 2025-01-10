@@ -14,3 +14,4 @@ export async function getMeals() {
 export function getMeal(slug) {
     return db.prepare("SELECT * FROM meals WHERE slug=?").get(slug);
 }
+

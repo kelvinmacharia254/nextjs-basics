@@ -1,10 +1,13 @@
-
+"use client"
 
 import styles from './page.module.css'
 import ImagePicker from "@/components/meals/image-picker";
+import {useActionState} from "react";
+import {shareMeal} from "@/lib/actions";
+import MealFormSubmit from "@/components/meals/meals-form-submit";
 
 export default function ShareMealPage() {
-
+    const [state, formAction] = useActionState(shareMeal, {message: null})
     return(
         <>
             <header className={styles.header}>
@@ -14,7 +17,7 @@ export default function ShareMealPage() {
                 <p>Or any other meal you feel needs sharing</p>
             </header>
             <main className={styles.main}>
-                <form className={styles.form}>
+                <form className={styles.form} action={formAction}>
                     <div className={styles.row}>
                         <p>
                             <label htmlFor="name">Your Name</label>
@@ -38,6 +41,11 @@ export default function ShareMealPage() {
                         <textarea name="instructions" id="instructions" rows="10"></textarea>
                     </p>
                     <ImagePicker/>
+                    {state?.message && <p>{state.message}</p>}
+                    {!state && <p>An unexpected error occurred. Please try again later.</p>}
+                    <p className={styles.actions}>
+                        <MealFormSubmit/>
+                    </p>
                 </form>
             </main>
         </>

@@ -48,7 +48,7 @@ export default function ImagePicker(){
                     id="image"
                     name="image"
                     ref={imageInput}
-                    onchange={handleImageChange}
+                    onChange={handleImageChange}
                     required
                 />
                 <button
